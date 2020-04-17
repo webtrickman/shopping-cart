@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="mobile-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="mobile-value" type="text" class="form-control text-center" value="1">
+                           <button id="mobile-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5 id="mobile-price">$1219</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,9 +43,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="case-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="case-value" type="text" class="form-control text-center" value="1">
+                           <button id="case-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
                         <h5>$59</h5>
@@ -78,5 +78,33 @@
       </div>
    </section>
 </body>
+<script>
+   //mobile btn area
+   const plusBtnMobile = document.getElementById("mobile-plus")
+   const minusBtnMobile = document.getElementById("mobile-minus")
+   const inputMobile = document.getElementById("mobile-value")
+
+   plusBtnMobile.addEventListener("click", function(){
+      inputMobile.value = parseFloat(inputMobile.value) + 1;
+   } )
+
+   minusBtnMobile.addEventListener("click", function(){
+      inputMobile.value = parseFloat(inputMobile.value) - 1;
+   } )
+
+   //case btn area
+   const plusBtnCase = document.getElementById("case-plus")
+   const minusBtnCase = document.getElementById("case-minus")
+   const inputCase = document.getElementById("case-value")
+   const casePrice = document.getElementById("case-price")
+
+   plusBtnCase.addEventListener("click", function(){
+      inputCase.value = parseFloat(inputCase.value) + 1;
+   } )
+
+   minusBtnCase.addEventListener("click", function(){
+      inputCase.value = parseFloat(inputCase.value) - 1;
+   } )
+</script>
 
 </html>
