@@ -29,7 +29,7 @@
                            <input id="mobile-value" type="text" class="form-control text-center" value="1">
                            <button id="mobile-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5 id="mobile-price">$1219</h5>
+                        <h5>$ <span id="mobile-price">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -48,7 +48,7 @@
                            <button id="case-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$ <span id="case-price">59</span> </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -64,7 +64,7 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
+                        <h5>$ <span id="sub-total">1,278</span></h5>
                         <h5>$0</h5>
                         <h5>$1,278</h5>
                      </div>
@@ -79,32 +79,41 @@
    </section>
 </body>
 <script>
-   //mobile btn area
-   const plusBtnMobile = document.getElementById("mobile-plus")
-   const minusBtnMobile = document.getElementById("mobile-minus")
-   const inputMobile = document.getElementById("mobile-value")
-
+   const plusBtnMobile = document.getElementById("mobile-plus");
    plusBtnMobile.addEventListener("click", function(){
+      const inputMobile = document.getElementById("mobile-value");
       inputMobile.value = parseFloat(inputMobile.value) + 1;
-   } )
+      const mobilePrice = document.getElementById("mobile-price").innerText;
+      totalMobilePrice = inputMobile.value * 1219;
+      document.getElementById("mobile-price").innerText = totalMobilePrice;
+   })
 
+   const minusBtnMobile = document.getElementById("mobile-minus");
    minusBtnMobile.addEventListener("click", function(){
+      const inputMobile = document.getElementById("mobile-value");
       inputMobile.value = parseFloat(inputMobile.value) - 1;
-   } )
+      const mobilePrice = document.getElementById("mobile-price").innerText;
+      totalMobilePrice = inputMobile.value * 1219;
+      document.getElementById("mobile-price").innerText = totalMobilePrice;
+   })
 
-   //case btn area
-   const plusBtnCase = document.getElementById("case-plus")
-   const minusBtnCase = document.getElementById("case-minus")
-   const inputCase = document.getElementById("case-value")
-   const casePrice = document.getElementById("case-price")
-
+   const plusBtnCase = document.getElementById("case-plus");
    plusBtnCase.addEventListener("click", function(){
+      const inputCase = document.getElementById("case-value");
       inputCase.value = parseFloat(inputCase.value) + 1;
-   } )
+      const casePrice = document.getElementById("case-price").innerText;
+      totalCasePrice = inputCase.value * 59;
+      document.getElementById("case-price").innerText = totalCasePrice;
+   })
 
+   const minusBtnCase = document.getElementById("case-minus");
    minusBtnCase.addEventListener("click", function(){
+      const inputCase = document.getElementById("case-value");
       inputCase.value = parseFloat(inputCase.value) - 1;
-   } )
+      const casePrice = document.getElementById("case-price").innerText;
+      totalCasePrice = inputCase.value * 59;
+      document.getElementById("case-price").innerText = totalCasePrice;
+   })
 </script>
 
 </html>
