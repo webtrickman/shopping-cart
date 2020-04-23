@@ -79,73 +79,72 @@
    </section>
 </body>
 <script>
+   //plusBtnMobile area
    const plusBtnMobile = document.getElementById("mobile-plus");
    plusBtnMobile.addEventListener("click", function(){
       const inputMobile = document.getElementById("mobile-value");
       inputMobile.value = parseFloat(inputMobile.value) + 1;
-      const mobilePrice = document.getElementById("mobile-price").innerText;
-      totalMobilePrice = inputMobile.value * 1219;
-      document.getElementById("mobile-price").innerText = totalMobilePrice;
+      MobilePrice = inputMobile.value * 1219;
+      document.getElementById("mobile-price").innerText = MobilePrice;
 
-      var mobilePriceNumber = document.getElementById("mobile-price").innerText;
-      mobilePriceNumber = parseFloat(mobilePriceNumber);
-      var casePriceNumber = document.getElementById("case-price").innerText;
-      casePriceNumber = parseFloat(casePriceNumber);
-      var subTotal = mobilePriceNumber + casePriceNumber;
+      var mobilePrice = document.getElementById("mobile-price").innerText;
+      mobilePrice = parseFloat(mobilePrice);
+      var casePrice = document.getElementById("case-price").innerText;
+      casePrice = parseFloat(casePrice);
+      var subTotal = mobilePrice + casePrice;
       document.getElementById("sub-total").innerText =  subTotal;
       document.getElementById("total").innerText = subTotal;
    })
 
+   //minusBtnMobile area
    const minusBtnMobile = document.getElementById("mobile-minus");
    minusBtnMobile.addEventListener("click", function(){
       const inputMobile = document.getElementById("mobile-value");
       inputMobile.value = parseFloat(inputMobile.value) - 1;
-      const mobilePrice = document.getElementById("mobile-price").innerText;
-      totalMobilePrice = inputMobile.value * 1219;
-      document.getElementById("mobile-price").innerText = totalMobilePrice;
+      MobilePrice = inputMobile.value * 1219;
+      document.getElementById("mobile-price").innerText = MobilePrice;
 
-      var mobilePriceNumber = document.getElementById("mobile-price").innerText;
-      mobilePriceNumber = parseFloat(mobilePriceNumber);
-      var casePriceNumber = document.getElementById("case-price").innerText;
-      casePriceNumber = parseFloat(casePriceNumber);
-      var subTotal = mobilePriceNumber + casePriceNumber;
+      var mobilePrice = document.getElementById("mobile-price").innerText;
+      mobilePrice = parseFloat(mobilePrice);
+      var casePrice = document.getElementById("case-price").innerText;
+      casePrice = parseFloat(casePrice);
+      var subTotal = mobilePrice + casePrice;
       document.getElementById("sub-total").innerText =  subTotal;
       document.getElementById("total").innerText = subTotal;
    })
 
+   //plusBtnCase area
    const plusBtnCase = document.getElementById("case-plus");
    plusBtnCase.addEventListener("click", function(){
       const inputCase = document.getElementById("case-value");
       inputCase.value = parseFloat(inputCase.value) + 1;
-      const casePrice = document.getElementById("case-price").innerText;
-      totalCasePrice = inputCase.value * 59;
-      document.getElementById("case-price").innerText = totalCasePrice;
+      CasePrice = inputCase.value * 59;
+      document.getElementById("case-price").innerText = CasePrice;
 
-      var mobilePriceNumber = document.getElementById("mobile-price").innerText;
-      mobilePriceNumber = parseFloat(mobilePriceNumber);
-      var casePriceNumber = document.getElementById("case-price").innerText;
-      casePriceNumber = parseFloat(casePriceNumber);
-      var subTotal = mobilePriceNumber + casePriceNumber;
+      var mobilePrice = document.getElementById("mobile-price").innerText;
+      mobilePrice = parseFloat(mobilePrice);
+      var casePrice = document.getElementById("case-price").innerText;
+      casePrice = parseFloat(casePrice);
+      var subTotal = mobilePrice + casePrice;
       document.getElementById("sub-total").innerText =  subTotal;
       document.getElementById("total").innerText = subTotal;
    })
 
+   //minusBtnCase area
    const minusBtnCase = document.getElementById("case-minus");
    minusBtnCase.addEventListener("click", function(){
       const inputCase = document.getElementById("case-value");
       inputCase.value = parseFloat(inputCase.value) - 1;
-      const casePrice = document.getElementById("case-price").innerText;
-      totalCasePrice = inputCase.value * 59;
-      document.getElementById("case-price").innerText = totalCasePrice;
+      CasePrice = inputCase.value * 59;
+      document.getElementById("case-price").innerText = CasePrice;
 
-      var mobilePriceNumber = document.getElementById("mobile-price").innerText;
-      mobilePriceNumber = parseFloat(mobilePriceNumber);
-      var casePriceNumber = document.getElementById("case-price").innerText;
-      casePriceNumber = parseFloat(casePriceNumber);
-      var subTotal = mobilePriceNumber + casePriceNumber;
+      var mobilePrice = document.getElementById("mobile-price").innerText;
+      mobilePrice = parseFloat(mobilePrice);
+      var casePrice = document.getElementById("case-price").innerText;
+      casePrice = parseFloat(casePrice);
+      var subTotal = mobilePrice + casePrice;
       document.getElementById("sub-total").innerText =  subTotal;
       document.getElementById("total").innerText = subTotal;
    })
-   
 </script>
 </html>
